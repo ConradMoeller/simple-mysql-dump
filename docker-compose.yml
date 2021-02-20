@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+
+   dbdump:
+     image: simple-mysql-dump
+     container_name: dbbackup	
+     restart: always
+     volumes:
+       - ./dbdump/data:/backup
+     environment:
+       CRON: "* * * * *"
+       MYSQL_HOST: database
+       MYSQL_USER: root
+       MYSQL_PASSWORD: secret
+       MYSQL_DATABASE: mydatabase
+
+

@@ -1,0 +1,2 @@
+echo "$CRON       /usr/local/bin/backup" > /etc/crontabs/root
+crond -f -L /usr/local/bin/crond.log
