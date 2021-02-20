@@ -3,7 +3,7 @@ version: '3.3'
 services:
 
    dbdump:
-     image: simple-mysql-dump
+     image: conradmoeller/simple-mysql-dump
      container_name: dbbackup	
      restart: always
      volumes:
